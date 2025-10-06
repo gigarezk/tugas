@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendataan Siswa - Halaman 2</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Form Pendataan Siswa</h2>
+    <p class="page-info">Halaman 2 dari 2</p>
+
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+
+    <p class="section-title">Data Orang Tua & Kontak</p>
+    <p class="section-desc">Lengkapi informasi orang tua dan kontak darurat</p>
+
+    <form>
+      <div>
+        <label>Kode Pos</label>
+        <input type="text" placeholder="00000">
+      </div>
+      <div>
+        <label>No. Telepon Siswa</label>
+        <input type="text" placeholder="08xxxxxxxxxx">
+      </div>
+
+      <div class="full-width">
+        <label>Email</label>
+        <input type="email" placeholder="email@example.com">
+      </div>
+
+      <p class="sub-section">Data Ayah</p>
+
+      <div>
+        <label>Nama Ayah</label>
+        <input type="text" placeholder="Nama lengkap ayah">
+      </div>
+      <div>
+        <label>Pekerjaan Ayah</label>
+        <input type="text" placeholder="Pekerjaan">
+      </div>
+
+      <div class="full-width">
+        <label>No. Telepon Ayah</label>
+        <input type="text" placeholder="08xxxxxxxxxx">
+      </div>
+
+      <p class="sub-section">Data Ibu</p>
+
+      <div>
+        <label>Nama Ibu</label>
+        <input type="text" placeholder="Nama lengkap ibu">
+      </div>
+      <div>
+        <label>Pekerjaan Ibu</label>
+        <input type="text" placeholder="Pekerjaan">
+      </div>
+
+      <div class="full-width">
+        <label>No. Telepon Ibu</label>
+        <input type="text" placeholder="08xxxxxxxxxx">
+      </div>
+
+      <p class="sub-section">Data Wali (Jika Ada)</p>
+
+      <div>
+        <label>Nama Wali</label>
+        <input type="text" placeholder="Nama lengkap wali">
+      </div>
+      <div>
+        <label>Pekerjaan Wali</label>
+        <input type="text" placeholder="Pekerjaan">
+      </div>
+
+      <div class="full-width">
+        <label>No. Telepon Wali</label>
+        <input type="text" placeholder="08xxxxxxxxxx">
+      </div>
+
+      <p class="sub-section">Informasi Keluarga</p>
+
+      <div>
+        <label>Jumlah Saudara</label>
+        <input type="number" placeholder="0">
+      </div>
+      <div>
+        <label>Anak Ke-</label>
+        <input type="number" placeholder="0">
+      </div>
+
+      <div class="full-width">
+        <label>Status Dalam Keluarga</label>
+        <select>
+          <option>Pilih status</option>
+          <option>Anak Kandung</option>
+          <option>Anak Angkat</option>
+          <option>Lainnya</option>
+        </select>
+      </div>
+
+      <div class="button-container">
+  <a href="index.html">
+    <button type="button" class="btn-back">← Kembali</button>
+  </a>
+  <button type="submit" class="btn-submit">Simpan Data</button>
+</div>
+    </form>
+    <div id="popup" class="popup">
+  <div class="popup-content">
+    <i>✔</i>
+    <h3>Data Berhasil Disimpan!</h3>
+    <p>Data siswa telah berhasil dicatat dalam sistem.</p>
+    <button onclick="closePopup()">Daftarkan Siswa Baru</button>
+  </div>
+</div>
+  </div>
+  <script>
+  const popup = document.getElementById('popup');
+  const saveBtn = document.querySelector('.btn-submit');
+
+  saveBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // cegah form reload
+    popup.classList.add('active');
+  });
+
+  function closePopup() {
+    popup.classList.remove('active');
+
+    // arahkan kembali ke form awal
+    window.location.href = "index.html"; 
+  }
+</script>
+</body>
+</html>
